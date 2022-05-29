@@ -14,10 +14,17 @@ com/umbeo/homeautomation/RelaysActivity.java
  com.umbeo.homeautomation.RelaysActivity$2
  com.umbeo.homeautomation.RelaysActivity$3
  com.umbeo.homeautomation.RelaysActivity$4
+com/umbeo/homeautomation/Tester.java
+ com.umbeo.homeautomation.Tester
+ com.umbeo.homeautomation.Tester$1
+com/umbeo/homeautomation/HomeAutomationOperator.java
+ com.umbeo.homeautomation.HomeAutomationOperator
 com/umbeo/homeautomation/RelayModel.java
  com.umbeo.homeautomation.RelayModel
 com/umbeo/homeautomation/AppDatabase.java
  com.umbeo.homeautomation.AppDatabase
+com/umbeo/homeautomation/HomeAutomationListener.java
+ com.umbeo.homeautomation.HomeAutomationListener
 com/umbeo/homeautomation/MainActivity.java
  com.umbeo.homeautomation.MainActivity
  com.umbeo.homeautomation.MainActivity$1
@@ -66,5 +73,10 @@ com/umbeo/homeautomation/DeviceAdapter.java
  com.umbeo.homeautomation.DeviceAdapter$4
  com.umbeo.homeautomation.DeviceAdapter$5
  com.umbeo.homeautomation.DeviceAdapter$ViewHolder
+com/umbeo/homeautomation/HomeAutomationConnector.java
+ com.umbeo.homeautomation.HomeAutomationConnector
+ com.umbeo.homeautomation.HomeAutomationConnector$1
+ com.umbeo.homeautomation.HomeAutomationConnector$HomeAutomationData
+ com.umbeo.homeautomation.HomeAutomationConnector$HomeAutomationState
 com/umbeo/homeautomation/IPScanner.java
  com.umbeo.homeautomation.IPScanner

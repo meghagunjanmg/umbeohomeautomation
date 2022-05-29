@@ -37,12 +37,14 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
     private Context context;
     int i = -1;
     String relayState = "";
+    HomeAutomationConnector hc;
 
     // RecyclerView recyclerView;
 
     public DeviceAdapter(Context context, List<DeviceModel> listdata) {
         this.listdata = listdata;
         this.context = context;
+        hc = new HomeAutomationConnector();
     }
 
     @Override
@@ -90,16 +92,21 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
                     i = 1;
                     holder.device_status.setTextColor(Color.parseColor("#00AD39"));
                     holder.device_status.setText("Connected");
-                    try {
-                        sq.put(new OperateData("start:" + (String) listdata.get(position).getDevice_name(), new DeviceState() {
-                            @Override
-                            public void relayState(String a) {
+
+                    try
+                    {
+                        hc.sq.put(new HomeAutomationOperator(listdata.get(position).getDevice_name(),"start",new HomeAutomationListener()
+                        {
+                            public void homeAutomationState(String a)
+                            {
                                 relayState = a;
-                                Toast.makeText(context, "Interface value: "+a+" Stored: "+relayState, Toast.LENGTH_SHORT).show();
+                                Log.e("TEST_RELAY_STATE",a);
                             }
-                        }));
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        }
+                        ));
+                    }
+                    catch(Exception e)
+                    {
                     }
                 }
 
