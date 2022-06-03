@@ -18,7 +18,7 @@
 12-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:6:22-76
 13
 14    <application
-14-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:8:5-30:19
+14-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:8:5-32:19
 15        android:allowBackup="true"
 15-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -33,69 +33,71 @@
 21-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:12:9-54
 22        android:supportsRtl="true"
 22-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:13:9-35
-23        android:testOnly="true"
-24        android:theme="@style/Theme.HomeAutomationESP8266App" >
-24-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:14:9-62
-25        <activity
-25-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:15:9-17:40
-26            android:name="com.umbeo.homeautomation.RelaysActivity"
-26-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:16:13-43
-27            android:exported="false" />
-27-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:17:13-37
+23        android:theme="@style/Theme.HomeAutomationESP8266App" >
+23-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:14:9-62
+24        <activity
+24-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:15:9-18:40
+25            android:name="com.umbeo.homeautomation.RelaysActivity"
+25-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:17:13-43
+26            android:exported="false"
+26-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:18:13-37
+27            android:screenOrientation="portrait" />
+27-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:16:13-49
 28        <activity
-28-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:18:9-26:20
+28-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:19:9-27:20
 29            android:name="com.umbeo.homeautomation.HomeActivity"
-29-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:19:13-41
+29-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:20:13-41
 30            android:screenOrientation="portrait" >
-30-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:20:13-49
+30-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:21:13-49
 31            <intent-filter>
-31-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:21:13-25:29
+31-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:22:13-26:29
 32                <action android:name="android.intent.action.MAIN" />
-32-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:22:17-69
-32-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:22:25-66
+32-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:23:17-69
+32-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:23:25-66
 33
 34                <category android:name="android.intent.category.LAUNCHER" />
-34-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:24:17-77
-34-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:24:27-74
+34-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:25:17-77
+34-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:25:27-74
 35            </intent-filter>
 36        </activity>
 37        <activity
-37-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:27:9-29:61
+37-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:28:9-31:20
 38            android:name="com.umbeo.homeautomation.MainActivity"
-38-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:28:13-41
-39            android:screenOrientation="portrait" />
-39-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:29:13-49
-40
-41        <service
-41-->[androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
-42            android:name="androidx.room.MultiInstanceInvalidationService"
-42-->[androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
-43            android:directBootAware="true"
-43-->[androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
-44            android:exported="false" />
-44-->[androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
-45
-46        <provider
-46-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:26:9-34:20
-47            android:name="androidx.startup.InitializationProvider"
-47-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:27:13-67
-48            android:authorities="com.umbeo.homeautomation.androidx-startup"
-48-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:28:13-68
-49            android:exported="false" >
-49-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:29:13-37
-50            <meta-data
-50-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:31:13-33:52
-51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-51-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:32:17-75
-52                android:value="androidx.startup" />
-52-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:33:17-49
-53            <meta-data
-53-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] /home/megha/.gradle/caches/transforms-2/files-2.1/39223965578ae29fec17f7460a7d17dd/lifecycle-process-2.4.0-alpha02/AndroidManifest.xml:31:13-33:52
-54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-54-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] /home/megha/.gradle/caches/transforms-2/files-2.1/39223965578ae29fec17f7460a7d17dd/lifecycle-process-2.4.0-alpha02/AndroidManifest.xml:32:17-78
-55                android:value="androidx.startup" />
-55-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] /home/megha/.gradle/caches/transforms-2/files-2.1/39223965578ae29fec17f7460a7d17dd/lifecycle-process-2.4.0-alpha02/AndroidManifest.xml:33:17-49
-56        </provider>
-57    </application>
-58
-59</manifest>
+38-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:29:13-41
+39            android:screenOrientation="portrait" >
+39-->/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:30:13-49
+40        </activity>
+41
+42        <service
+42-->[androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+43            android:name="androidx.room.MultiInstanceInvalidationService"
+43-->[androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+44            android:directBootAware="true"
+44-->[androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+45            android:exported="false" />
+45-->[androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+46
+47        <provider
+47-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:26:9-34:20
+48            android:name="androidx.startup.InitializationProvider"
+48-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:27:13-67
+49            android:authorities="com.umbeo.homeautomation.androidx-startup"
+49-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:28:13-68
+50            android:exported="false" >
+50-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:29:13-37
+51            <meta-data
+51-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:31:13-33:52
+52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+52-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:32:17-75
+53                android:value="androidx.startup" />
+53-->[androidx.emoji2:emoji2:1.0.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/fdffb464ec282d415c574c9e7d045bdd/emoji2-1.0.0-alpha03/AndroidManifest.xml:33:17-49
+54            <meta-data
+54-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] /home/megha/.gradle/caches/transforms-2/files-2.1/39223965578ae29fec17f7460a7d17dd/lifecycle-process-2.4.0-alpha02/AndroidManifest.xml:31:13-33:52
+55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] /home/megha/.gradle/caches/transforms-2/files-2.1/39223965578ae29fec17f7460a7d17dd/lifecycle-process-2.4.0-alpha02/AndroidManifest.xml:32:17-78
+56                android:value="androidx.startup" />
+56-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] /home/megha/.gradle/caches/transforms-2/files-2.1/39223965578ae29fec17f7460a7d17dd/lifecycle-process-2.4.0-alpha02/AndroidManifest.xml:33:17-49
+57        </provider>
+58    </application>
+59
+60</manifest>
