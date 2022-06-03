@@ -1,13 +1,11 @@
 package com.umbeo.homeautomation;
-
-
-import static com.umbeo.homeautomation.HomeActivity.sq;
 import static com.umbeo.homeautomation.RelaysActivity.updateName;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,16 +15,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.List;
 
 public class RelayAdapter extends RecyclerView.Adapter<RelayAdapter.ViewHolder>{
     List<RelayModel> models ;
     Context context;
-
     public RelayAdapter(List<RelayModel> models, Context context) {
         this.models = models;
         this.context = context;
@@ -59,11 +59,21 @@ public class RelayAdapter extends RecyclerView.Adapter<RelayAdapter.ViewHolder>{
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 try {
-                    sq.put(new OperateData("r"+position+1,null));
+                    if (b) {
+                        int rs = position + 1;
+                        String ip = models.get(position).getDeviceip();
+                        HomeActivity.connector.sq.put(new HomeAutomationOperator(ip, "R:" + rs + 1, null));
+                    } else{
+                        int rs = position + 1;
+                        String ip = models.get(position).getDeviceip();
+                        HomeActivity.connector.sq.put(new HomeAutomationOperator(ip, "R:" + rs + 0, null));
+                    }
+                    System.out.println(compoundButton);
+                    System.out.println(b);
                 }
                 catch(Exception e)
                 {
-
+                    Log.e("TEST_RELAY_STATE",e.toString());
                 }
             }
         });
@@ -87,35 +97,27 @@ public class RelayAdapter extends RecyclerView.Adapter<RelayAdapter.ViewHolder>{
     }
 
     private void Show(int posi) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View dialoglayout = inflater.inflate(R.layout.dialog_layout, null);
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
-        alertDialog.setTitle("Enter New Name");
-        alertDialog.setMessage(" ");
-
-        final EditText input = new EditText(context);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        input.setLayoutParams(lp);
-        alertDialog.setView(input);
-        alertDialog.setIcon(R.drawable.ic_baseline_done_24);
-
-        alertDialog.setPositiveButton("YES",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        String newName = input.getText().toString();
-                        updateName(posi, newName);
-                    }
-                });
-
-        alertDialog.setNegativeButton("NO",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
+        alertDialog.setView(dialoglayout);
+        TextInputEditText input = dialoglayout.findViewById(R.id.input);
+        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String newName = input.getText().toString();
+                if(newName.length()>0) updateName(posi, newName);
+                else Toast.makeText(context, "Empty String", Toast.LENGTH_SHORT).show();
+            }
+        });
+        alertDialog.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
 
         alertDialog.show();
-
     }
 
 }

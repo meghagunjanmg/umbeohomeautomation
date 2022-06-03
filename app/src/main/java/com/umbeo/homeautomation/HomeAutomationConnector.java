@@ -1,4 +1,7 @@
+
 package com.umbeo.homeautomation;
+
+import android.util.Log;
 
 import java.net.*;
 import java.util.*;
@@ -62,6 +65,7 @@ public class HomeAutomationConnector
                             else
                             {
                                 sendData(h.cmd,sa);
+                                Log.e("TEST_RELAY_STATE",h.cmd );
                             }
                         }
                     }

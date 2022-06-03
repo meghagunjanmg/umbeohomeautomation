@@ -11,11 +11,31 @@ public class RelayModel {
 
     String relay_name;
     String relayState;
+    String deviceip;
+    String ds;
 
-    public RelayModel(int pid, String relay_name, String relayState) {
+    public RelayModel(int pid, String relay_name, String relayState, String deviceip, String ds) {
         this.pid = pid;
+        this.deviceip = deviceip;
         this.relay_name = relay_name;
         this.relayState = relayState;
+        this.ds = ds;
+    }
+
+    public String getDs() {
+        return ds;
+    }
+
+    public void setDs(String ds) {
+        this.ds = ds;
+    }
+
+    public String getDeviceip() {
+        return deviceip;
+    }
+
+    public void setDeviceip(String deviceip) {
+        this.deviceip = deviceip;
     }
 
     public int getPid() {

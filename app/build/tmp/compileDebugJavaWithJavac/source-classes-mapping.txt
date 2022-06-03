@@ -14,6 +14,8 @@ com/umbeo/homeautomation/RelaysActivity.java
  com.umbeo.homeautomation.RelaysActivity$2
  com.umbeo.homeautomation.RelaysActivity$3
  com.umbeo.homeautomation.RelaysActivity$4
+ com.umbeo.homeautomation.RelaysActivity$5
+ com.umbeo.homeautomation.RelaysActivity$6
 com/umbeo/homeautomation/Tester.java
  com.umbeo.homeautomation.Tester
  com.umbeo.homeautomation.Tester$1
@@ -40,8 +42,8 @@ com/umbeo/homeautomation/OperateData.java
 com/umbeo/homeautomation/HomeActivity.java
  com.umbeo.homeautomation.HomeActivity
  com.umbeo.homeautomation.HomeActivity$1
+ com.umbeo.homeautomation.HomeActivity$10
  com.umbeo.homeautomation.HomeActivity$2
- com.umbeo.homeautomation.HomeActivity$2$1
  com.umbeo.homeautomation.HomeActivity$3
  com.umbeo.homeautomation.HomeActivity$4
  com.umbeo.homeautomation.HomeActivity$5

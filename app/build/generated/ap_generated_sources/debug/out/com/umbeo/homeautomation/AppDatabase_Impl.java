@@ -29,13 +29,13 @@ public final class AppDatabase_Impl extends AppDatabase {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `devices` (`pid` INTEGER NOT NULL, `device_name` TEXT, `new_name` TEXT, `device_status` INTEGER NOT NULL, PRIMARY KEY(`pid`))");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `devicerelays` (`pid` INTEGER NOT NULL, `relay_name` TEXT, `relayState` TEXT, PRIMARY KEY(`pid`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `devicerelays` (`pid` INTEGER NOT NULL, `relay_name` TEXT, `relayState` TEXT, `deviceip` TEXT, `ds` TEXT, PRIMARY KEY(`pid`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '07f3390b0057a5cd0b23dd935c4dddf1')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4672b7278f2f78ddec545e8a425140a6')");
       }
 
       @Override
@@ -94,10 +94,12 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoDevices + "\n"
                   + " Found:\n" + _existingDevices);
         }
-        final HashMap<String, TableInfo.Column> _columnsDevicerelays = new HashMap<String, TableInfo.Column>(3);
+        final HashMap<String, TableInfo.Column> _columnsDevicerelays = new HashMap<String, TableInfo.Column>(5);
         _columnsDevicerelays.put("pid", new TableInfo.Column("pid", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsDevicerelays.put("relay_name", new TableInfo.Column("relay_name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsDevicerelays.put("relayState", new TableInfo.Column("relayState", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsDevicerelays.put("deviceip", new TableInfo.Column("deviceip", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsDevicerelays.put("ds", new TableInfo.Column("ds", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysDevicerelays = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesDevicerelays = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoDevicerelays = new TableInfo("devicerelays", _columnsDevicerelays, _foreignKeysDevicerelays, _indicesDevicerelays);
@@ -109,7 +111,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "07f3390b0057a5cd0b23dd935c4dddf1", "bef6d99226f4bd31db6d271bbbd66f5b");
+    }, "4672b7278f2f78ddec545e8a425140a6", "baafd6941537590ae31311e36e3aee14");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

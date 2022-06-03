@@ -1,6 +1,4 @@
 package com.umbeo.homeautomation;
-
-import static com.umbeo.homeautomation.HomeActivity.sq;
 import static com.umbeo.homeautomation.HomeActivity.updateName;
 import static com.umbeo.homeautomation.HomeActivity.updateStatus;
 
@@ -18,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -36,7 +35,6 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
     int count = 0;
     private Context context;
     int i = -1;
-    String relayState = "";
     HomeAutomationConnector hc;
 
     // RecyclerView recyclerView;
@@ -83,7 +81,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
                     holder.connect.setChecked(false);
                     i = 0;
                     try {
-                        sq.put(new OperateData("stop:",null));
+                        hc.sq.put(new HomeAutomationOperator(listdata.get(position).getDevice_name(),"stop:",null));
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -92,15 +90,13 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
                     i = 1;
                     holder.device_status.setTextColor(Color.parseColor("#00AD39"));
                     holder.device_status.setText("Connected");
-
                     try
                     {
-                        hc.sq.put(new HomeAutomationOperator(listdata.get(position).getDevice_name(),"start",new HomeAutomationListener()
-                        {
-                            public void homeAutomationState(String a)
-                            {
-                                relayState = a;
-                                Log.e("TEST_RELAY_STATE",a);
+                        hc.sq.put(new HomeAutomationOperator(listdata.get(position).getDevice_name(), "start", new HomeAutomationListener() {
+                            public void homeAutomationState(String a) {
+                                if (a != null) {
+                                    HomeActivity.relaystate.put(listdata.get(i).getDevice_name(), a);
+                                }
                             }
                         }
                         ));
@@ -127,14 +123,15 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
 
             }
         });
-
         holder.deviceCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(listdata.get(position).getDevice_status()==1) {
+                if(listdata.get(position).getDevice_status()==1 ) {
+
                     Intent i = new Intent(context, RelaysActivity.class);
-                    i.putExtra("title", listdata.get(position).getNew_name() + "");
-                    i.putExtra("relays", relayState+"");
+                    i.putExtra("title", listdata.get(position).getDevice_name() + "");
+                    i.putExtra("newName", listdata.get(position).getNew_name() + "");
+                    i.putExtra("relays", HomeActivity.relaystate.get(listdata.get(position).getDevice_name()));
                     context.startActivity(i);
                 }
                 else {
@@ -145,35 +142,27 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
     }
 
     private void Show(int posi) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View dialoglayout = inflater.inflate(R.layout.dialog_layout, null);
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
-        alertDialog.setTitle("Enter New Name");
-        alertDialog.setMessage(" ");
-
-        final EditText input = new EditText(context);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        input.setLayoutParams(lp);
-        alertDialog.setView(input);
-        alertDialog.setIcon(R.drawable.ic_baseline_done_24);
-
-        alertDialog.setPositiveButton("YES",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        String newName = input.getText().toString();
-                        updateName(posi, newName);
-                    }
-                });
-
-        alertDialog.setNegativeButton("NO",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
+        alertDialog.setView(dialoglayout);
+        TextInputEditText input = dialoglayout.findViewById(R.id.input);
+        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String newName = input.getText().toString();
+                if(newName.length()>0) updateName(posi, newName);
+                else Toast.makeText(context, "Empty String", Toast.LENGTH_SHORT).show();
+            }
+        });
+        alertDialog.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
 
         alertDialog.show();
-
 }
 
 
@@ -186,16 +175,16 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
         TextView device_name, device_status;
         Switch connect;
         TextInputEditText newName;
-        ImageButton edit_name;
+        ImageView edit_name;
         CardView deviceCard;
 
         ViewHolder(View itemView) {
             super(itemView);
-            device_name = (TextView) itemView.findViewById(R.id.device_name);
-            edit_name = (ImageButton) itemView.findViewById(R.id.edit_name);
+            device_name = (TextView) itemView.findViewById(R.id.device_name);  //ip name
+            edit_name = (ImageView) itemView.findViewById(R.id.edit_name);
             newName = (TextInputEditText) itemView.findViewById(R.id.newName);
             device_status = (TextView) itemView.findViewById(R.id.device_status);
-            connect = (Switch) itemView.findViewById(R.id.connect);
+            connect = (Switch) itemView.findViewById(R.id.connect); // toggle
             deviceCard = (CardView) itemView.findViewById(R.id.deviceCard);
         }
 

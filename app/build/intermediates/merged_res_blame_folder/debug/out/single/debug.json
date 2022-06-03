@@ -32,12 +32,12 @@
         "source": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/build/intermediates/res/merged/debug/drawable_ic_baseline_add_circle_outline_24.xml.flat",
-        "source": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml"
-    },
-    {
         "merged": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/build/intermediates/res/merged/debug/font_poppins.ttf.flat",
         "source": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/res/font/poppins.ttf"
+    },
+    {
+        "merged": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/build/intermediates/res/merged/debug/drawable_ic_baseline_add_circle_outline_24.xml.flat",
+        "source": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml"
     },
     {
         "merged": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/build/intermediates/res/merged/debug/menu_bottom_menu.xml.flat",
@@ -58,6 +58,10 @@
     {
         "merged": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/build/intermediates/res/merged/debug/layout_dialog_layout.xml.flat",
+        "source": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/res/layout/dialog_layout.xml"
     },
     {
         "merged": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",

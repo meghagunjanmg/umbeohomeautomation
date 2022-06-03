@@ -27,12 +27,14 @@ public final class RealysDao_Impl implements RealysDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateOne;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateState;
+
   public RealysDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfRelayModel = new EntityInsertionAdapter<RelayModel>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `devicerelays` (`pid`,`relay_name`,`relayState`) VALUES (?,?,?)";
+        return "INSERT OR ABORT INTO `devicerelays` (`pid`,`relay_name`,`relayState`,`deviceip`,`ds`) VALUES (?,?,?,?,?)";
       }
 
       @Override
@@ -48,6 +50,16 @@ public final class RealysDao_Impl implements RealysDao {
         } else {
           stmt.bindString(3, value.getRelayState());
         }
+        if (value.getDeviceip() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.getDeviceip());
+        }
+        if (value.getDs() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getDs());
+        }
       }
     };
     this.__preparedStmtOfNukeTable = new SharedSQLiteStatement(__db) {
@@ -61,6 +73,13 @@ public final class RealysDao_Impl implements RealysDao {
       @Override
       public String createQuery() {
         final String _query = "Update devicerelays SET relay_name =? WHERE pid =?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateState = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "Update devicerelays SET relayState =? WHERE pid =?";
         return _query;
       }
     };
@@ -115,6 +134,28 @@ public final class RealysDao_Impl implements RealysDao {
   }
 
   @Override
+  public void UpdateState(final int id, final String dev) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateState.acquire();
+    int _argIndex = 1;
+    if (dev == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, dev);
+    }
+    _argIndex = 2;
+    _stmt.bindLong(_argIndex, id);
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateState.release(_stmt);
+    }
+  }
+
+  @Override
   public LiveData<List<RelayModel>> getAll() {
     final String _sql = "SELECT * FROM devicerelays ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
@@ -126,6 +167,8 @@ public final class RealysDao_Impl implements RealysDao {
           final int _cursorIndexOfPid = CursorUtil.getColumnIndexOrThrow(_cursor, "pid");
           final int _cursorIndexOfRelayName = CursorUtil.getColumnIndexOrThrow(_cursor, "relay_name");
           final int _cursorIndexOfRelayState = CursorUtil.getColumnIndexOrThrow(_cursor, "relayState");
+          final int _cursorIndexOfDeviceip = CursorUtil.getColumnIndexOrThrow(_cursor, "deviceip");
+          final int _cursorIndexOfDs = CursorUtil.getColumnIndexOrThrow(_cursor, "ds");
           final List<RelayModel> _result = new ArrayList<RelayModel>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final RelayModel _item;
@@ -135,7 +178,11 @@ public final class RealysDao_Impl implements RealysDao {
             _tmpRelay_name = _cursor.getString(_cursorIndexOfRelayName);
             final String _tmpRelayState;
             _tmpRelayState = _cursor.getString(_cursorIndexOfRelayState);
-            _item = new RelayModel(_tmpPid,_tmpRelay_name,_tmpRelayState);
+            final String _tmpDeviceip;
+            _tmpDeviceip = _cursor.getString(_cursorIndexOfDeviceip);
+            final String _tmpDs;
+            _tmpDs = _cursor.getString(_cursorIndexOfDs);
+            _item = new RelayModel(_tmpPid,_tmpRelay_name,_tmpRelayState,_tmpDeviceip,_tmpDs);
             _result.add(_item);
           }
           return _result;
@@ -161,6 +208,8 @@ public final class RealysDao_Impl implements RealysDao {
       final int _cursorIndexOfPid = CursorUtil.getColumnIndexOrThrow(_cursor, "pid");
       final int _cursorIndexOfRelayName = CursorUtil.getColumnIndexOrThrow(_cursor, "relay_name");
       final int _cursorIndexOfRelayState = CursorUtil.getColumnIndexOrThrow(_cursor, "relayState");
+      final int _cursorIndexOfDeviceip = CursorUtil.getColumnIndexOrThrow(_cursor, "deviceip");
+      final int _cursorIndexOfDs = CursorUtil.getColumnIndexOrThrow(_cursor, "ds");
       final List<RelayModel> _result = new ArrayList<RelayModel>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final RelayModel _item;
@@ -170,7 +219,11 @@ public final class RealysDao_Impl implements RealysDao {
         _tmpRelay_name = _cursor.getString(_cursorIndexOfRelayName);
         final String _tmpRelayState;
         _tmpRelayState = _cursor.getString(_cursorIndexOfRelayState);
-        _item = new RelayModel(_tmpPid,_tmpRelay_name,_tmpRelayState);
+        final String _tmpDeviceip;
+        _tmpDeviceip = _cursor.getString(_cursorIndexOfDeviceip);
+        final String _tmpDs;
+        _tmpDs = _cursor.getString(_cursorIndexOfDs);
+        _item = new RelayModel(_tmpPid,_tmpRelay_name,_tmpRelayState,_tmpDeviceip,_tmpDs);
         _result.add(_item);
       }
       return _result;

@@ -24,4 +24,7 @@ public interface RealysDao {
 
     @Query("Update devicerelays SET relay_name =:dev WHERE pid =:id")
     void UpdateOne(int id, String dev);
+
+    @Query("Update devicerelays SET relayState =:dev WHERE pid =:id")
+    void UpdateState(int id, String dev);
 }

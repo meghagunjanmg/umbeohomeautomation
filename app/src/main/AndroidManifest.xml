@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeAutomationESP8266App">
         <activity
+            android:screenOrientation="portrait"
             android:name=".RelaysActivity"
             android:exported="false" />
         <activity
@@ -26,7 +27,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
