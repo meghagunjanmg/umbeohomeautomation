@@ -139,9 +139,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void reconnect() {
-
-        HomeActivity.relaystate = new ConcurrentHashMap<>();
-
         AppExecutors.getInstance().diskIO().execute(new Runnable() {
             @Override
             public void run() {
@@ -158,16 +155,7 @@ public class HomeActivity extends AppCompatActivity {
                 try
                 {
                     int finalI = i;
-                    connector.sq.put(new HomeAutomationOperator(deviceModels.get(finalI).getDevice_name(), "start", new HomeAutomationListener() {
-                        public void homeAutomationState(String a)
-                        {
-                            if (a != null) {
-                                HomeActivity.relaystate.remove(deviceModels.get(finalI).getDevice_name());
-                                HomeActivity.relaystate.put(deviceModels.get(finalI).getDevice_name(),a);
-                            }
-                        }
-                    }
-                    ));
+                    connector.sq.put(new HomeAutomationOperator(deviceModels.get(finalI).getDevice_name(), "start", null));
                 }
                 catch(Exception e)
                 {

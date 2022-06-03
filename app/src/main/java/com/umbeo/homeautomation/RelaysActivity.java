@@ -85,11 +85,13 @@ public class RelaysActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relays);
-        title = findViewById(R.id.title);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+
         if (db == null) {
             db = AppDatabase.getInstance(getApplicationContext());
         }
+
+        title = findViewById(R.id.title);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         tit = getIntent().getStringExtra("title");
         newName = getIntent().getStringExtra("newName");
         title.setText(newName);
@@ -97,9 +99,9 @@ public class RelaysActivity extends AppCompatActivity {
         try {
             dstate.put(tit);
         }
-        catch (Exception e){
+        catch (Exception e){}
 
-        }
+
         relays = getIntent().getStringExtra("relays");
 
         relays = HomeActivity.relaystate.get(tit);
@@ -111,7 +113,6 @@ public class RelaysActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        Log.e("TEST",tit);
         for(int i = 0;i<size;i++)
         {
             relayModels.add(new RelayModel(i,"Relay "+i+1, String.valueOf(relays.charAt(i)),tit,relays));
