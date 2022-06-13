@@ -8,7 +8,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        app:cardBackgroundColor="@color/white"
         android:id="@+id/relay_card"
         android:layout_height="170dp"
         android:layout_width="170dp"
@@ -28,7 +27,6 @@
                 android:id="@+id/relay_name"
                 android:text="Relay 1"
                 android:textSize="18sp"
-                android:textColor="@color/black"
                 android:fontFamily="@font/poppins"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -57,7 +55,7 @@
                     android:id="@+id/edit_name"
                     android:padding="4dp"
                     android:src="@drawable/ic_baseline_edit_24"
-                    android:tint="@color/purple_500"
+                    android:tint="@color/purple_700"
                     android:layout_gravity="end|center_vertical"
                     app:useMaterialThemeColors="true"
                     android:layout_width="match_parent"

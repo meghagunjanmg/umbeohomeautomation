@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
 MERGED from [com.google.android.material:material:1.5.0] /home/megha/.gradle/caches/transforms-2/files-2.1/b6d9f364fcb9135617143fff49e6cfd9/material-1.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] /home/megha/.gradle/caches/transforms-2/files-2.1/8bdeff18b0ffe0438c22af83a68d2776/constraintlayout-2.1.2/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.0-alpha03] /home/megha/.gradle/caches/transforms-2/files-2.1/2cbed10809c41f825becb9183e78a5be/appcompat-1.4.0-alpha03/AndroidManifest.xml:17:1-24:12
@@ -46,33 +46,33 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/megha/.gradle/cache
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/megha/.gradle/caches/transforms-2/files-2.1/b93e2b8a7319b8231fdc1936a598b860/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/megha/.gradle/caches/transforms-2/files-2.1/f8503f66578d12caa389b09e1e5eca48/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/megha/.gradle/caches/transforms-2/files-2.1/5da2fabf987620f20c153879c4806659/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
 	package
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:3:5-39
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:3:5-39
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:1-34:12
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:1-32:12
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:5:5-67
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:6:5-79
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:6:22-76
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:8:5-32:19
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:8:5-30:19
 MERGED from [com.google.android.material:material:1.5.0] /home/megha/.gradle/caches/transforms-2/files-2.1/b6d9f364fcb9135617143fff49e6cfd9/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] /home/megha/.gradle/caches/transforms-2/files-2.1/b6d9f364fcb9135617143fff49e6cfd9/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] /home/megha/.gradle/caches/transforms-2/files-2.1/8bdeff18b0ffe0438c22af83a68d2776/constraintlayout-2.1.2/AndroidManifest.xml:9:5-20
@@ -92,51 +92,49 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/megha/.gradle/caches/
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0-alpha01] /home/megha/.gradle/caches/transforms-2/files-2.1/22802dacf04f55d4b2f1e49dd6e93e62/core-1.7.0-alpha01/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:11:9-41
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:12:9-54
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:14:9-62
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:14:9-62
 activity#com.umbeo.homeautomation.RelaysActivity
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:15:9-18:40
-	android:screenOrientation
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:16:13-49
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:15:9-17:40
 	android:exported
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:18:13-37
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:17:13-43
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:16:13-43
 activity#com.umbeo.homeautomation.HomeActivity
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:19:9-27:20
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:18:9-26:20
 	android:screenOrientation
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:21:13-49
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:20:13-49
 	android:name
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:20:13-41
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:22:13-26:29
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:23:17-69
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:23:25-66
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:25:17-77
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:25:27-74
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:24:27-74
 activity#com.umbeo.homeautomation.MainActivity
-ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:28:9-31:20
+ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:27:9-29:61
 	android:screenOrientation
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:30:13-49
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:29:13-49
 	android:name
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml:29:13-41
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml:28:13-41
 uses-sdk
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.5.0] /home/megha/.gradle/caches/transforms-2/files-2.1/b6d9f364fcb9135617143fff49e6cfd9/material-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.5.0] /home/megha/.gradle/caches/transforms-2/files-2.1/b6d9f364fcb9135617143fff49e6cfd9/material-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] /home/megha/.gradle/caches/transforms-2/files-2.1/8bdeff18b0ffe0438c22af83a68d2776/constraintlayout-2.1.2/AndroidManifest.xml:5:5-7:41
@@ -221,16 +219,16 @@ MERGED from [androidx.print:print:1.0.0] /home/megha/.gradle/caches/transforms-2
 MERGED from [androidx.print:print:1.0.0] /home/megha/.gradle/caches/transforms-2/files-2.1/f8503f66578d12caa389b09e1e5eca48/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/megha/.gradle/caches/transforms-2/files-2.1/5da2fabf987620f20c153879c4806659/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/megha/.gradle/caches/transforms-2/files-2.1/5da2fabf987620f20c153879c4806659/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
-		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/src/main/AndroidManifest.xml
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+		ADDED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
+		INJECTED from /media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/src/main/AndroidManifest.xml
 service#androidx.room.MultiInstanceInvalidationService
 ADDED from [androidx.room:room-runtime:2.2.5] /home/megha/.gradle/caches/transforms-2/files-2.1/5fdc0bf7ff76afe6a17c764d7cdab19f/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
 	android:exported

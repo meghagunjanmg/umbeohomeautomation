@@ -66,16 +66,27 @@ public class HomeActivity extends AppCompatActivity {
             db = AppDatabase.getInstance(getApplicationContext());
         }
 
-
-        reconnect();
-
-
         db.deviceDao().getAll().observe(this, new Observer<List<DeviceModel>>() {
             @Override
             public void onChanged(List<DeviceModel> entities) {
                 deviceModels = entities;
                 deviceModelList = entities;
-
+                for(int i=0;i<deviceModels.size();i++) {
+                    if (deviceModels.get(i).getDevice_status() == 1) {
+                        Log.e("TEST*",deviceModels.get(i).getDevice_name());
+                        try {
+                            int finalI = i;
+                            HomeAutomationConnector.sq.put(new HomeAutomationOperator(deviceModels.get(i).getDevice_name(), "start", new HomeAutomationListener() {
+                                @Override
+                                public void homeAutomationState(String a) {
+                                    HomeActivity.relaystate.put(deviceModels.get(finalI).getDevice_name(),a);
+                                    Log.e("TEST_RELAY_STATE",a);
+                                }
+                            }));
+                        } catch (Exception e) {
+                        }
+                    }
+                }
                 adapter = new DeviceAdapter(HomeActivity.this, deviceModels);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
@@ -90,16 +101,28 @@ public class HomeActivity extends AppCompatActivity {
             {
                 device_list.clear();
                 deviceModels = new ArrayList<>();
+                AppExecutors.getInstance().diskIO().execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        db.deviceDao().nukeTable();
+                    }
+                });
 
-                DeleteData();
 
+
+                //adapter.notifyDataSetChanged();
                 Set<String> scanned_dev = ds.scanDevice("D:ECHO",5210,2000,5);
                 if(scanned_dev.size()>0) {
                     device_list.addAll(scanned_dev);
                     for(int i = 0; i<device_list.size();i++) {
                         deviceModels.add(new DeviceModel(i,device_list.get(i), device_list.get(i),0));
                     }
+                    //adapter = new DeviceAdapter(HomeActivity.this,deviceModels);
+                    recyclerView.setHasFixedSize(true);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
+                    recyclerView.setAdapter(adapter);
 
+                    DeleteData();
                     InsertData(deviceModels);
 
                     Toast.makeText(getApplicationContext(), "Device Scanned !!!",
@@ -135,33 +158,6 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
-
-    }
-
-    private void reconnect() {
-        AppExecutors.getInstance().diskIO().execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                 deviceModels = db.deviceDao().loadAll();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        for(int i=0;i<deviceModels.size();i++){
-            if(deviceModels.get(i).getDevice_status()==1){
-                try
-                {
-                    int finalI = i;
-                    connector.sq.put(new HomeAutomationOperator(deviceModels.get(finalI).getDevice_name(), "start", null));
-                }
-                catch(Exception e)
-                {
-                }
-            }
-        }
 
     }
 

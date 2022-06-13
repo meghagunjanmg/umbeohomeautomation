@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -93,10 +92,10 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
                     try
                     {
                         hc.sq.put(new HomeAutomationOperator(listdata.get(position).getDevice_name(), "start", new HomeAutomationListener() {
-                            public void homeAutomationState(String a) {
-                                if (a != null) {
-                                    HomeActivity.relaystate.put(listdata.get(i).getDevice_name(), a);
-                                }
+                            public void homeAutomationState(String a)
+                            {
+                                HomeActivity.relaystate.put(listdata.get(position).getDevice_name(),a);
+                                Log.e("TEST_RELAY_STATE",a);
                             }
                         }
                         ));
@@ -126,12 +125,12 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
         holder.deviceCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(listdata.get(position).getDevice_status()==1 ) {
-
+                Log.e("TEST_RELAY_STATE","*"+HomeActivity.relaystate.get(listdata.get(position).getDevice_name()));
+                if(listdata.get(position).getDevice_status()==1) {
                     Intent i = new Intent(context, RelaysActivity.class);
-                    i.putExtra("title", listdata.get(position).getDevice_name() + "");
-                    i.putExtra("newName", listdata.get(position).getNew_name() + "");
+                    i.putExtra("title", listdata.get(position).getNew_name() + "");
                     i.putExtra("relays", HomeActivity.relaystate.get(listdata.get(position).getDevice_name()));
+                    i.putExtra("ip", listdata.get(position).getDevice_name() + "");
                     context.startActivity(i);
                 }
                 else {
@@ -142,27 +141,35 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
     }
 
     private void Show(int posi) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View dialoglayout = inflater.inflate(R.layout.dialog_layout, null);
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
-        alertDialog.setView(dialoglayout);
-        TextInputEditText input = dialoglayout.findViewById(R.id.input);
-        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                String newName = input.getText().toString();
-                if(newName.length()>0) updateName(posi, newName);
-                else Toast.makeText(context, "Empty String", Toast.LENGTH_SHORT).show();
-            }
-        });
-        alertDialog.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-            }
-        });
+        alertDialog.setTitle("Enter New Name");
+        alertDialog.setMessage(" ");
+
+        final EditText input = new EditText(context);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        input.setLayoutParams(lp);
+        alertDialog.setView(input);
+        alertDialog.setIcon(R.drawable.ic_baseline_done_24);
+
+        alertDialog.setPositiveButton("YES",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        String newName = input.getText().toString();
+                        updateName(posi, newName);
+                    }
+                });
+
+        alertDialog.setNegativeButton("NO",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
 
         alertDialog.show();
+
 }
 
 
@@ -175,13 +182,13 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder
         TextView device_name, device_status;
         Switch connect;
         TextInputEditText newName;
-        ImageView edit_name;
+        ImageButton edit_name;
         CardView deviceCard;
 
         ViewHolder(View itemView) {
             super(itemView);
             device_name = (TextView) itemView.findViewById(R.id.device_name);  //ip name
-            edit_name = (ImageView) itemView.findViewById(R.id.edit_name);
+            edit_name = (ImageButton) itemView.findViewById(R.id.edit_name);
             newName = (TextInputEditText) itemView.findViewById(R.id.newName);
             device_status = (TextView) itemView.findViewById(R.id.device_status);
             connect = (Switch) itemView.findViewById(R.id.connect); // toggle

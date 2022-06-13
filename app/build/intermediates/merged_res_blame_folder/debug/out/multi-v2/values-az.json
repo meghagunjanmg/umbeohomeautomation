@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/HomeAutomationESP8266App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
+            "outputFile": "/media/megha/7F81-2A7E/projects/Simple-Home-Automation-2022-main/umbeohomeautomation-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
             "map": [
                 {
                     "source": "/home/megha/.gradle/caches/transforms-2/files-2.1/2cbed10809c41f825becb9183e78a5be/appcompat-1.4.0-alpha03/res/values-az/values-az.xml",

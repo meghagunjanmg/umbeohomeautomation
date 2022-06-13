@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="26"
+        android:minSdkVersion="24"
         android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,8 +23,7 @@
         android:theme="@style/Theme.HomeAutomationESP8266App" >
         <activity
             android:name="com.umbeo.homeautomation.RelaysActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.umbeo.homeautomation.HomeActivity"
             android:screenOrientation="portrait" >
@@ -36,8 +35,7 @@
         </activity>
         <activity
             android:name="com.umbeo.homeautomation.MainActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"

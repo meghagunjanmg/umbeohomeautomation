@@ -36,7 +36,7 @@ public class RelaysActivity extends AppCompatActivity {
 
     TextView title;
     static AppDatabase db;
-    String tit,relays,newName;
+    String tit,relays,ip;
     List<RelayModel> relayModels = new ArrayList<>();
     static List<RelayModel> relayModelArrayList = new ArrayList<>();
     RecyclerView recyclerView;
@@ -85,39 +85,29 @@ public class RelaysActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relays);
-
+        title = findViewById(R.id.title);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         if (db == null) {
             db = AppDatabase.getInstance(getApplicationContext());
         }
-
-        title = findViewById(R.id.title);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         tit = getIntent().getStringExtra("title");
-        newName = getIntent().getStringExtra("newName");
-        title.setText(newName);
-
         try {
             dstate.put(tit);
         }
-        catch (Exception e){}
+        catch (Exception e){
 
-
+        }
         relays = getIntent().getStringExtra("relays");
+        ip = getIntent().getStringExtra("ip");
+        title.setText(tit);
+        relays = HomeActivity.relaystate.get(ip);
 
-        relays = HomeActivity.relaystate.get(tit);
-
-        int size = 0;
-        try {
-            size = relays.length();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        for(int i = 0;i<size;i++)
-        {
-            relayModels.add(new RelayModel(i,"Relay "+i+1, String.valueOf(relays.charAt(i)),tit,relays));
-            relayModelArrayList.add(new RelayModel(i,"Relay "+i+1, String.valueOf(relays.charAt(i)),tit,relays));
-        }
+            int size = relays.length();
+            for(int i = 0;i<size;i++)
+            {
+                relayModels.add(new RelayModel(i,"Relay "+i+1, String.valueOf(relays.charAt(i)),ip,relays));
+                relayModelArrayList.add(new RelayModel(i,"Relay "+i+1, String.valueOf(relays.charAt(i)),ip,relays));
+            }
 
         adapter = new RelayAdapter(relayModels, RelaysActivity.this);
         recyclerView.setHasFixedSize(true);

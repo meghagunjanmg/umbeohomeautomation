@@ -2675,7 +2675,6 @@ id deviceCard
 id device_name
 id device_status
 id dialog_button
-id dialog_layout_root
 id dimensions
 id direct
 id disableHome
@@ -2745,7 +2744,6 @@ id image
 id immediateStop
 id included
 id info
-id input
 id invisible
 id inward
 id ips
@@ -3116,7 +3114,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout dialog_layout
 layout item_device
 layout item_relay
 layout m3_alert_dialog
